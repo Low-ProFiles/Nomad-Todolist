@@ -9,7 +9,6 @@ const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
-
   //이름을 제출했을때 새로고침을 방지
   event.preventDefault();
 
@@ -32,7 +31,6 @@ function deleteSubmit(event) {
 }
 
 function paintGreetings(username) {
-  
   //유저의 이름을 받은 후, id='greeting'을 가지고 있는 h1 안에 작성
   greeting.innerText = `Hello ${username}`;
 
@@ -45,10 +43,8 @@ const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 //localStorage에 저장되어 있는 값이 없다면 -> localStorage에 값을 삭제하여 저장되어 있는 값을 없앤다면
 if (savedUsername === null) {
-
   //숨겨놨던 loginForm 다시 보여줘서 이름을 입력 받을 수 있도록 준비
   loginForm.classList.remove(HIDDEN_CLASSNAME);
-
   //제출시에 onLoginSubmit() 실행
   //여기서 중요한 것은 onLoginSubmit를 통해 함수를 호출했다는 것인데 submit을 했을 때 함수가 실행되기를 원하기 때문에 ()를 넣지 않은 것입니다.
   //onLoginSubmit() 이렇게 호출하면 조건 상관 없이 즉시 실행됩니다.
