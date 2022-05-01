@@ -32,7 +32,7 @@ function deleteSubmit(event) {
 }
 
 function paintGreetings(username) {
-  
+
   //유저의 이름을 받은 후, id='greeting'을 가지고 있는 h1 안에 작성
   greeting.innerText = `Hello ${username}`;
 
@@ -56,3 +56,5 @@ if (savedUsername === null) {
 } else {
   paintGreetings(savedUsername);
 }
+
+//민철아 너무 고생 많았어
