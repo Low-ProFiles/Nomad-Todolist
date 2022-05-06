@@ -56,6 +56,7 @@ function paintToDo(newTodo) {
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const button = document.createElement("button");
+  button.style.marginLeft='10px'
   button.innerText = "❌";
   button.addEventListener("click", deleteToDo);
   checkbox.addEventListener("click", completedTodo);
